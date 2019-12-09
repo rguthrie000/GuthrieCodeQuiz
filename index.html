@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Name on Browser tab -->
-    <title>Document</title>
+    <title>rguthrie's Coding Quiz</title>
     
     <!-- Note relative location of reset.css and style.css -->
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -15,9 +15,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    
-    <!-- Javascript support; jquery, popper, and bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <div class="container">
+
+        <!-- Row 1 is the Name Box -->
+        <div class="row" class="everyPage">
+            <!-- Text Box -->
+            <div class="col-sm-12">
+                <div class="NameBox">
+                    <h5>rguthrie's</h5>
+                    <h4>Coding Quiz</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                    <!-- this column can be one of three things: -->
+                    <!-- 1. rules of the quiz -->
+                    <section id="textBox">
+                        <ul id="rules">
+                            <li type="disc">100 seconds, 10 questions, multiple choice.</li>
+                            <li type="disc">Your score is time remaining after Question 10.</li>
+                            <li type="disc">Correct answers increase time.</li>
+                            <li type="disc">Wrong answers decrease time.</li>
+                            <li type="disc">Let's get it on! Click START!</li>
+                        </ul>
+                        <!-- 2. Q & A area -->
+                        <p id="question"></p>
+                        <ul id="answers">
+                            <button id="ans-0" class="btn answer" value="0"></button>
+                            <button id="ans-1" class="btn answer" value="1"></button>
+                            <button id="ans-2" class="btn answer" value="2"></button>
+                            <button id="ans-3" class="btn answer" value="3"></button>
+                        </ul>    
+                        <!-- 3. results area -->
+                        <button id="result" class="btn" value="resultSeen"></button>
+                    </section>
+            </div>
+        </div>    
+
+        <div class="row">
+            <div class="col-sm-12">
+                <section id="statusBox">
+                    <button id="startBtn" class="btn" value="start">START</button>
+                    <section id="countdown"></section>
+                    <ul id="scoresBox">
+                        <li id="scoresTitle">Top Scores          </li>
+                        <li id="score0">*empty*</li>
+                        <li id="score1">*empty*</li>
+                        <li id="score2">*empty*</li>
+                        <li id="score3">*empty*</li>
+                        <li id="score4">*empty*</li>
+                        <li id="lastScore">What will *You* score?</li>
+                    </ul>
+                    <section id="enterScore">
+                        <h2>Woohoo! Top 5, baby!</h2>
+                        <form>
+                            <label for="playerName">Your Name</label>
+                            <input type="text" name="playerName" id="playerName"/>
+                            <button id="addMe" value="addMe">Add Me!</button>
+                        </form>
+                    </section>    
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <audio id="correctAudio">
+        <source src="assets/audio/chime_up.wav" type="audio/wav">
+    </audio>
+    <audio id="wrongAudio">
+        <source src="assets/audio/boing_x.wav" type="audio/wav">
+    </audio>
+    <audio id="timeoutAudio">
+        <source src="assets/audio/buzzer_x.wav" type="audio/wav">
+    </audio>
+    <audio id="top5Audio">
+        <source src="assets/audio/applause2_x.wav" type="audio/wav">
+    </audio>
+
+
+    <script src="assets/js/questions.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Javascript support; jQuery, popper, and bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 

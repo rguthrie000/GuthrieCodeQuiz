@@ -1,0 +1,186 @@
+/* CSS for rguthrie's Password Generator
+CSS rule-sets for the Password Generator.  This page is being kept simple
+because it is a simple utility.  It has more of feel of legitimacy with
+plain background and simple controls.
+ */
+
+/* NameBox - yellow "pill" with title. */
+
+.hidden {
+  display: none;
+}
+
+.NameBox {
+    width: 25%;
+    height: 100px;
+    padding: 15px;
+    margin: 10px 0 20px 120px;
+    text-align: center;
+    background: yellow;
+    color: black;
+    border-radius: 100px;
+    border: solid 1px black;
+}
+
+#textBox {
+  position: relative;
+  width: 500px;
+  height: 230px;
+  /* margin: 3px; */
+  border: solid 2px black;
+}
+
+#rules {
+    position: absolute;
+    top: 17px;
+    left: 60px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+#question {
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+#statusBox {
+  position: relative;
+  width: 500px;
+  height: 230px;
+}
+
+#startBtn  {
+    position:absolute;
+    width: 250px;
+    height: 100px;
+    top: 30px;
+    left: 0;
+    padding: 0 0 0 0;
+    margin: 10px 0 0 20px;
+    color: white;
+    border-radius: 10px;
+    background-color: lightgreen;
+    font-size: 3rem;
+    font-weight: 750;
+    border: 10px solid black;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.startBtn:hover {
+  background-color: yellow;
+}
+
+.answer {
+    position: absolute;
+    left: 40px;
+    width: 400px;
+    height: 30px;
+    text-align: left;
+    font-weight: 500;
+    /* font-size: 1.2rem; */
+    /* line-height: 2; */
+}
+
+#ans-0 {bottom:120px;}
+#ans-1 {bottom: 90px;}
+#ans-2 {bottom: 60px;}
+#ans-3 {bottom: 30px;}
+
+#ans-0:hover, #ans-1:hover, #ans-2:hover, #ans-3:hover {
+  background: lightgray;
+  border: 1px solid black;
+}
+
+#result {
+    position: absolute;
+    left: 40px;
+    top: 65px;
+    width: 415px;
+    height: 100px;
+    padding: 0 0 0 0;
+    background: lightblue;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    border: 2px solid orange;
+    font-size: 1.2rem;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+#countdown {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 250px;
+    height: 150px;
+    padding: 0 0 0 0;
+    font-size: 7em;
+    font-family: "Lucida-console";
+    color: red;
+    background: yellow;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#scoresBox {
+    position: absolute;
+    top: 0;
+    left: 300px; 
+    width: 180px;
+    height: 145px;
+    text-align: left;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 20px 0 0 0;
+    padding: 2px 0 0 5px;
+    text-align: left;
+    background: lightblue;
+    border: 1px solid black;
+}
+
+#scoresTitle {
+    color: blue;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+}  
+
+#lastScore {
+    color: blue;
+    text-decoration-line: overline;
+    text-decoration-style: solid;
+    text-decoration-color: black;  
+}
+
+#enterScore {
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    top: 10px;
+    left: 0px;
+    text-align: center;
+    font-weight: 500;
+    background: lightblue;
+    border: 2px solid orange;
+    font-size: 1.2rem;
+}

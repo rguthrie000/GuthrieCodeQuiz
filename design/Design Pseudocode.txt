@@ -1,0 +1,31 @@
+Quiz Game Design
+
+See requirements/README.MD for instructions.
+
+link to show highscores
+link to game description
+
+0. Structure
+	a. Use HTML & CSS for Intro Page, GamePlay Page, & Score Page.  Hide GamePlay &	Score.
+	b. Hide/Display pages using JS.
+	c. Monitor events with JS.
+1. Startup
+	a. Use HTML & CSS for Intro Page, GamePlay Page, & Score Page.  Hide GamePlay &	Score.
+2. On User Start
+	a. Clear GameOver and Initialize Question Sequencer 
+		i. Choose permutation of questions (use index reservation method from Password Generator)
+	b. Start Countdown Timer
+	c. Run Question Sequencer loop
+		i. Present next Question, monitor for answer
+		ii. Evaluate & reveal answer, celebrate correct or wrong with audio; add corrects.
+			Subtract time on wrong answer.
+		iii. Also monitor BailOut button; set Countdown Timer to 0 and set GameOver.
+		iv. If Questions remain and Countdown Timer not expired, loop back to i., else set GameOver
+		v. if GameOver, switch to Score Page, present score and highscores.  If present	score cracks top 5, 
+			offer chance to take name and insert name & score in highscores.
+
+3. Countdown Timer tick service
+	a. Track and display remaining time
+	b. End (i.e. clear) Countdown Timer when <= 0 s remaining (Countdown Timer can go negative on BailOut from GamePlay)
+
+4. Mouse click service
