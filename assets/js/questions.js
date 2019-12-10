@@ -1,103 +1,103 @@
 var questionsArray = 
 [
-  {q:"When was 'The C Programming Language' published?",
-   a:
+  {title:"When was 'The C Programming Language' published?",
+   choices:
    [
     "1999",
     "1984",
     "1978",
     "1965"
    ], 
-   c:"2"},
+   answer:"1978"},
 
-  {q:"Who said \"Adding manpower to a late software project makes it later.\"?",
-   a:
+  {title:"Who said \"Adding manpower to a late software project makes it later.\"?",
+   choices:
    [
     "Petzold",
     "Brooks",
     "Ritchie",
     "Knuth"
    ], 
-   c:"1"},
+   answer:"Brooks"},
 
-  {q:"Who is considered to be the first programmer?",
-   a:
+  {title:"Who is considered to be the first programmer?",
+   choices:
    [
     "H.G. Wells",
     "Aristotle",
     "Isaac Newton",
     "Ada, countess of Lovelace"
    ], 
-   c:"3"},
+   answer:"Ada, countess of Lovelace"},
 
-  {q:"The three pillars of Front-End Development are:",
-   a:
+  {title:"The three pillars of Front-End Development are:",
+   choices:
    [
     "HTML, C, and CSS",
-    "HTMA, CSS, and Javascript",
+    "HTML, CSS, and Javascript",
     "JSON, CSS, and HTML",
     "GitHub, HTML, and CSS"
    ], 
-   c:"1"},
+   answer:"HTML, CSS, and Javascript"},
 
-  {q:"In JS, which gives a number from -0.5 (inclusive) to 0.5 (exclusive)?",
-   a:
+  {title:"In JS, which gives a number from -0.5 (inclusive) to 0.5 (exclusive)?",
+   choices:
    [
     "Math.random() - 0.5",
     "0.5 - Math.random()",
     "Math.floor(Math.random() * 0.5)",
     "Math.floor(Math.random() * -0.5)"
    ], 
-   c:"0"},
+   answer:"Math.random() - 0.5"},
 
-  {q:"Which is a major function of any Web Browser?",
-   a:
+  {title:"Which is a major function of any Web Browser?",
+   choices:
    [
     "Rendering webpages",
     "Keeping URL bookmarks",
     "Searching",
     "Playing media from websites"
    ], 
-   c:"0"},
+   answer:"Rendering webpages"},
 
-  {q:"(18 / 3 * 3) evaluates as:",
-   a:
+  {title:"(18 / 3 * 3) evaluates as:",
+   choices:
    [
     "2",
     "18",
     "syntax error",
     "3"
    ], 
-   c:"1"},
+   answer:"18"},
 
-  {q:"CSS rules are applied according to:",
-   a:
+  {title:"CSS rules are applied according to:",
+   choices:
    [
     "Dominance",
     "Closure",
     "Synchronicity",
     "Specificity"
    ], 
-   c:"3"},
+   answer:"Specificity"},
 
-  {q:"'Responsive' webpage design refers to:",
-   a:
+  {title:"'Responsive' webpage design refers to:",
+   choices:
    [
     "Small webpages for fast loading",
     "Functional across screen sizes",
     "Voice interface for commands",
     "Voice interface for responses"
    ], 
-   c:"1"},
+   answer:"Functional across screen sizes"},
 
-  {q:"'Full Stack Development' refers to which set of domains?",
-   a:
+  {title:"'Full Stack Development' refers to which set of domains?",
+   choices:
    [
     "HTML, CSS, and Javascript",
     "Web server and web client applications",
     "Web interface, business logic, Databases",
     "Cooking four pancakes simultaneously"
    ], 
-   c:"1"}
+   answer:"Web server and web client applications"}
 ];
 

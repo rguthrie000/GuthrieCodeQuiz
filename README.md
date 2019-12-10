@@ -1,87 +1,50 @@
-# Project Title
+# rguthrie's Coding Quiz
 
-One Paragraph of project description goes here
+This site is a short timed quiz on Web Development coding knowledge.  The quiz covers current 
+knowledge, but throws in a couple of computer science historical questions too. (If you've made
+it here, K&R was published in 1978, and 'Adding manpower...' is known as Brooks' Law.)
+
+The game keeps the Top 5 scores by Player Name in browser local storage.  
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This project is hosted on GitHub at https://rguthrie000.github.io/GuthrieCodingQuiz/
+The HTML, CSS, and JS files used for the Password Generator are located at repo
+rguthrie000/GuthrieCodingQuiz.  In addition to index.html, the assets\css folder has
+reset.css, which is linked from index.html's header.  Two javascript files are used for logic 
+(script.js), and for the set of questions and answers (questions.js).
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+A web browser is required to interpret/run this program.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+Copy index.html to the desired execution directory.  Also copy the full assets subdirectory 
+to the execution directory.  To run, paste the relative link to index.html in the browser URL box,
+then execute.
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+The Coding Quiz is easily tested by using its GUI to explore performance against
+the requirements.
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+See Installing, above.
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+## This page was built with:
+VS Code - Smart Editor for HTML and CSS
+Google Chrome - browser for display and test
+Chrome Inspector - Google Chrome add-on for inspection of page elements
 
 ## Versioning
+GitHub is used for version control and hosts the website.
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+## Author
+rguthrie000 (Richard Guthrie)
 
 ## Acknowledgments
+rguthrie000 is grateful to the UCF Coding Bootcamp for bringing him to an initial
+release of this portfolio in 3 days of class time.
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc

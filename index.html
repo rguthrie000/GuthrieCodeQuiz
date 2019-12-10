@@ -8,7 +8,7 @@
     <!-- Name on Browser tab -->
     <title>rguthrie's Coding Quiz</title>
     
-    <!-- Note relative location of reset.css and style.css -->
+    <!-- Included CSS files -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -19,10 +19,10 @@
     <div class="container">
 
         <!-- Row 1 is the Name Box -->
-        <div class="row" class="everyPage">
+        <div class="row">
             <!-- Text Box -->
             <div class="col-sm-12">
-                <div class="NameBox">
+                <div id="nameBox">
                     <h5>rguthrie's</h5>
                     <h4>Coding Quiz</h4>
                 </div>
@@ -31,9 +31,10 @@
 
         <div class="row">
             <div class="col-sm-12">
-                    <!-- this column can be one of three things: -->
-                    <!-- 1. rules of the quiz -->
+                    <!-- The associated javascript uses the display and disabled  -->
+                    <!-- attributes to have this column be one of three things:   -->
                     <section id="textBox">
+                        <!-- 1. rules of the quiz -->
                         <ul id="rules">
                             <li type="disc">100 seconds, 10 questions, multiple choice.</li>
                             <li type="disc">Your score is time remaining after Question 10.</li>
@@ -49,7 +50,7 @@
                             <button id="ans-2" class="btn answer" value="2"></button>
                             <button id="ans-3" class="btn answer" value="3"></button>
                         </ul>    
-                        <!-- 3. results area -->
+                        <!-- 3. Results area -->
                         <button id="result" class="btn" value="resultSeen"></button>
                     </section>
             </div>
@@ -57,23 +58,27 @@
 
         <div class="row">
             <div class="col-sm-12">
+                <!-- this column is also repurposed during the game -->
                 <section id="statusBox">
+                    <!-- 1. Start Button and Scores Box -->
                     <button id="startBtn" class="btn" value="start">START</button>
-                    <section id="countdown"></section>
                     <ul id="scoresBox">
-                        <li id="scoresTitle">Top Scores          </li>
-                        <li id="score0">*empty*</li>
-                        <li id="score1">*empty*</li>
-                        <li id="score2">*empty*</li>
-                        <li id="score3">*empty*</li>
-                        <li id="score4">*empty*</li>
+                        <li id="scoresTitle">Top Scores</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
                         <li id="lastScore">What will *You* score?</li>
                     </ul>
+                    <!-- 2. Countdown Timer -->
+                    <section id="countdown"></section>
+                    <!-- 3. High Score Entry -->
                     <section id="enterScore">
                         <h2>Woohoo! Top 5, baby!</h2>
                         <form>
                             <label for="playerName">Your Name</label>
-                            <input type="text" name="playerName" id="playerName"/>
+                            <input type="text" id="playerName">
                             <button id="addMe" value="addMe">Add Me!</button>
                         </form>
                     </section>    
@@ -95,14 +100,8 @@
         <source src="assets/audio/applause2_x.wav" type="audio/wav">
     </audio>
 
-
     <script src="assets/js/questions.js"></script>
     <script src="assets/js/script.js"></script>
-
-    <!-- Javascript support; jQuery, popper, and bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 </html>

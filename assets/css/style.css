@@ -1,20 +1,17 @@
-/* CSS for rguthrie's Password Generator
-CSS rule-sets for the Password Generator.  This page is being kept simple
-because it is a simple utility.  It has more of feel of legitimacy with
-plain background and simple controls.
+/* CSS for rguthrie's Coding Quiz.
+Refer to the HTML (index.html).  In general there are three
+areas being controlled -- the simple nameBox (250px wide) and two 
+multi-use box areas stacked below the nameBox (both 500px wide).
+The stacked boxes are position:relative, and their contents are 
+position:absolute.
  */
 
-/* NameBox - yellow "pill" with title. */
-
-.hidden {
-  display: none;
-}
-
-.NameBox {
-    width: 25%;
+/* nameBox - yellow "pill" with title. common to all rguthrie sites. */
+#nameBox {
+    width: 250px;
     height: 100px;
     padding: 15px;
-    margin: 10px 0 20px 120px;
+    margin: 10px 0 20px 125px;
     text-align: center;
     background: yellow;
     color: black;
@@ -22,14 +19,17 @@ plain background and simple controls.
     border: solid 1px black;
 }
 
+/* textBox is the common area for presenting the rules and
+the Q&A of the quiz. */
 #textBox {
-  position: relative;
-  width: 500px;
-  height: 230px;
-  /* margin: 3px; */
-  border: solid 2px black;
+    position: relative;
+    width: 500px;
+    height: 230px;
+    border: solid 2px black;
+    box-shadow: 2px 4px lightgray;
 }
 
+/* rules's parent is textBox */
 #rules {
     position: absolute;
     top: 17px;
@@ -39,6 +39,7 @@ plain background and simple controls.
     line-height: 2;
 }
 
+/* question's parent is textBox */
 #question {
     position: absolute;
     top: 17px;
@@ -48,12 +49,55 @@ plain background and simple controls.
     line-height: 1.2;
 }
 
+/* answer's parent is textBox */
+.answer {
+    position: absolute;
+    left: 40px;
+    width: 400px;
+    height: 30px;
+    text-align: left;
+    font-weight: 500;
+}
+#ans-0 {bottom:120px;}
+#ans-1 {bottom: 90px;}
+#ans-2 {bottom: 60px;}
+#ans-3 {bottom: 30px;}
+#ans-0:hover, #ans-1:hover, #ans-2:hover, #ans-3:hover {
+  background: lightgray;
+  border: 1px outset black;
+}
+
+/* result is also in textBox */
+#result {
+    position: absolute;
+    left: 40px;
+    top: 65px;
+    width: 415px;
+    height: 100px;
+    padding: 0 0 0 0;
+    background: lightblue;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    border: 2px outset orange;
+    box-shadow: 2px 4px lightgray;
+    font-size: 1.2rem;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+#result:hover {
+  background-color: yellow;
+}
+
+/* statusBox is a space below textBox - same width & height */
 #statusBox {
   position: relative;
   width: 500px;
   height: 230px;
 }
 
+/* startBtn is a child of statusBox */
 #startBtn  {
     position:absolute;
     width: 250px;
@@ -67,70 +111,55 @@ plain background and simple controls.
     background-color: lightgreen;
     font-size: 3rem;
     font-weight: 750;
-    border: 10px solid black;
+    border: 10px outset black;
     text-align: center;
+    box-shadow: 2px 4px lightgray;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
 }
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-}
-
-.startBtn:hover {
+#startBtn:hover {
   background-color: yellow;
 }
 
-.answer {
+/* scoresBox is in statusBox, with scoresTitle and lastScore
+   line items inside scoresBox */
+#scoresBox {
     position: absolute;
-    left: 40px;
-    width: 400px;
-    height: 30px;
+    top: 0;
+    left: 300px; 
+    width: 180px;
+    height: 145px;
     text-align: left;
-    font-weight: 500;
-    /* font-size: 1.2rem; */
-    /* line-height: 2; */
-}
-
-#ans-0 {bottom:120px;}
-#ans-1 {bottom: 90px;}
-#ans-2 {bottom: 60px;}
-#ans-3 {bottom: 30px;}
-
-#ans-0:hover, #ans-1:hover, #ans-2:hover, #ans-3:hover {
-  background: lightgray;
-  border: 1px solid black;
-}
-
-#result {
-    position: absolute;
-    left: 40px;
-    top: 65px;
-    width: 415px;
-    height: 100px;
-    padding: 0 0 0 0;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 20px 0 0 0;
+    padding: 2px 0 0 5px;
+    text-align: left;
+    font-size: 0.8rem;
+    font-family: Consolas; 
     background: lightblue;
-    color: white;
-    text-align: center;
-    font-weight: 500;
-    border: 2px solid orange;
-    font-size: 1.2rem;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
+    border: 1px ridge black;
+    box-shadow: 2px 4px lightgray;
+}
+#scoresTitle {
+    color: blue;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+}  
+#lastScore {
+    color: blue;
+    text-decoration-line: overline;
+    text-decoration-style: solid;
+    text-decoration-color: black;  
 }
 
+/* the countdown display is another use of space in statusBox */
 #countdown {
     position: absolute;
     top: 10px;
-    left: 0;
+    left: 125px;
     width: 250px;
     height: 150px;
     padding: 0 0 0 0;
@@ -142,36 +171,7 @@ plain background and simple controls.
     border: 1px solid black;
 }
 
-#scoresBox {
-    position: absolute;
-    top: 0;
-    left: 300px; 
-    width: 180px;
-    height: 145px;
-    text-align: left;
-    font-weight: 500;
-    line-height: 20px;
-    margin: 20px 0 0 0;
-    padding: 2px 0 0 5px;
-    text-align: left;
-    background: lightblue;
-    border: 1px solid black;
-}
-
-#scoresTitle {
-    color: blue;
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-color: black;
-}  
-
-#lastScore {
-    color: blue;
-    text-decoration-line: overline;
-    text-decoration-style: solid;
-    text-decoration-color: black;  
-}
-
+/* enterScore is the third use of statusBox */
 #enterScore {
     position: absolute;
     width: 500px;
@@ -182,5 +182,34 @@ plain background and simple controls.
     font-weight: 500;
     background: lightblue;
     border: 2px solid orange;
+    box-shadow: 2px 4px lightgray;
     font-size: 1.2rem;
 }
+/* addMe is the submit button inside enterScore */
+#addMe {
+    background: lightblue;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    border: 2px outset orange;
+    font-size: 1.2rem;
+    box-shadow: 2px 4px lightgray;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+#addMe:hover {
+  background-color: yellow;
+}
+
+/* magical incantation to make the glow happen */
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
